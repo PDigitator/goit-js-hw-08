@@ -11,7 +11,7 @@ function createImageCardsMarkup(images) {
   return images
     .map(
       ({ preview, original, description }) =>
-        `<li class="gallery__item">ç
+        `<li class="gallery__item">
           <a class="gallery__link" href="${original}">
             <img
               class="gallery__image"
