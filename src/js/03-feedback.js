@@ -17,17 +17,17 @@ function onSaveStorage() {
   localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(feedbackFormValue));
 }
 
-// function inStorage() {
-//   return (storageValue =
-//     JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {});
-// }
+function inStorage() {
+  return (storageValue =
+    JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {});
+}
 
 feedbackForm.addEventListener('submit', onSubmit);
 
 function onSubmit(evt) {
   evt.preventDefault();
 
-  const storageValue = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {};
+  inStorage();
 
   if (!storageValue.email || !storageValue.message) {
     alert('Please fill in all the fields!');
@@ -40,7 +40,7 @@ function onSubmit(evt) {
 }
 
 function updateIput() {
-  const storageValue = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {};
+  inStorage();
 
   const emailValue = storageValue.email || '';
   email.value = emailValue;
