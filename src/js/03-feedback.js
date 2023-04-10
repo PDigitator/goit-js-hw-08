@@ -32,7 +32,7 @@ function onSubmit(evt) {
 
 function updateOutput() {
   const storageSavedValue =
-    JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? [];
+    JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {};
 
   emailValue = storageSavedValue.email || '';
   email.value = emailValue;
