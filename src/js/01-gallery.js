@@ -26,7 +26,7 @@ function createImageCardsMarkup(images) {
 
 imageGallery.insertAdjacentHTML('beforeend', cardsMarkup);
 
-imageGallery.style.listStyleType = 'none';
+imageGallery.style.listStyle = 'none';
 
 const lightbox = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
