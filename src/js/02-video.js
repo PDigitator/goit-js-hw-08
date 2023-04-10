@@ -1,7 +1,7 @@
 import Player from '@vimeo/player';
 import throttle from 'lodash.throttle';
 
-const player = new Player('vimeo-player'); //? ініціалізація працює без querySelector та '#' (для id)
+const player = new Player('vimeo-player'); //? ініціалізація player працює без querySelector та '#' (для id)
 
 player.on('timeupdate', throttle(onPlay, 1000));
 
