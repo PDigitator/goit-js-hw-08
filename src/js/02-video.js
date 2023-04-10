@@ -5,12 +5,14 @@ const player = new Player('vimeo-player'); //? ініціалізація пра
 
 player.on('timeupdate', throttle(onPlay, 1000));
 
+const LOCALSTORAGE_KEY = 'videoplayer-current-time';
+
 function onPlay(data) {
   const currentTime = data.seconds;
 
-  localStorage.setItem('videoplayer-current-time', currentTime);
+  localStorage.setItem(LOCALSTORAGE_KEY, currentTime);
 }
 
-const savedTime = Number(localStorage.getItem('videoplayer-current-time')); //? працює і без Number
+const savedTime = Number(localStorage.getItem(LOCALSTORAGE_KEY)); //? працює і без Number
 
-player.setCurrentTime(savedTime);
+player.setCurrentTime(savedTime); //! || 0
