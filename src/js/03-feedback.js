@@ -42,10 +42,10 @@ function onSubmit(evt) {
 function updateIput() {
   const storageValue = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY)) ?? {};
 
-  emailValue = storageValue.email || '';
+  const emailValue = storageValue.email || '';
   email.value = emailValue;
 
-  messageValue = storageValue.message || '';
+  const messageValue = storageValue.message || '';
   message.value = messageValue;
 }
 
@@ -87,9 +87,9 @@ function updateIput() {
 // }
 
 // function updateIput() {
-//   emailValue = storageValue.email || '';
+//   const emailValue = storageValue.email || '';
 //   email.value = emailValue;
 
-//   messageValue = storageValue.message || '';
+//   const messageValue = storageValue.message || '';
 //   message.value = messageValue;
 // }
